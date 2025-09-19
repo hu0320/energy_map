@@ -44,7 +44,7 @@ window.onload = function () {
       },
     },
     biomass: {
-      filePath: "simplified_bio_data.geojson",
+      filePath: "./implified_bio_data.geojson",
       property: "capacity",
       legendTitle: "潜在生物质资源 (kt/year)",
       popupTemplate: (val) => `<b>潜在生物质资源:</b> ${val.toFixed(2)} kt/year`,
@@ -171,7 +171,7 @@ window.onload = function () {
     if (newDatasetKey === 'nitrogen') {
       const filePaths = [];
       for (let i = 1; i <= nitrogenInfo.count; i++) {
-        filePaths.push(`${nitrogenInfo.baseName}_part_${i}.geojson`);
+        filePaths.push(`./${nitrogenInfo.baseName}_part_${i}.geojson`);
       }
       
       Promise.all(filePaths.map(path => fetch(path).then(res => res.json())))
