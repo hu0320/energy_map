@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  padding-top: 50px;
+}
+
+
+
+.info-popup-container .leaflet-popup-content-wrapper {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.info-popup-container .leaflet-popup-content {
+  margin: 0;
+}
+
+
+.info-popup {
+  min-width: 300px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.title-name {
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+}
+
+.popup-body {
+  padding-top: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+
+.popup-label {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.popup-value {
+  font-size: 20px;
+  color: #000;
+  font-weight: 250;
+}
+.popup-unit {
+
+  color: #000;
+
+
+}
+
+.info-popup.chemical-popup .popup-value {
+  font-size: 16px;
+}
+
+.info-popup.chemical-popup hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 12px 0;
+}
+
+
+.type-name {
+  font-size: 14px;
+  color: #555;
+}
+
+.products-list {
+  list-style-type: none; 
+  padding-left: 0;
+  margin: 0;
+}
+
+.product-name {
+  font-size: 16px;
+  color: #000;
+  font-weight: 250;
+}
+
+.sub-capacity {
+  font-size: 16px;
+  font-weight: 250;
+  color: #2980b9;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 120px;
+  border-radius: 2px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.top-nav a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.top-nav a.active {
+  background-color: #002850;
+  color: white;
+  cursor: default;
+}
+
+#map {
+
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+#controls {
+  position: absolute;
+
+  top: 60px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+#controls select {
+  padding: 5px;
+  font-size: 14px;
+}
+#legend {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+#legend h4 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-weight: normal;
+}
+#legend .filter-item {
+  display: block;
+  margin-bottom: 8px;
+}
+#legend .filter-item label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+#legend .color-box {
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin-right: 8px;
+  display: inline-block;
+  border-radius: 50%;
+}
+#legend input[type="checkbox"] {
+  margin-right: 8px;
+}
+.select-all-container {
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+#total-count-display {
+  position: absolute;
+
+  top: 115px;
+  left: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+#size-legend {
+  position: absolute;
+
+  left: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+#size-legend h4 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-weight: normal;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.legend-circle {
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+}
+.legend-label {
+  font-size: 12px;
+}
+
+
+.my-cluster-icon {
+  background-color: rgba(13, 110, 253, 0.6);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

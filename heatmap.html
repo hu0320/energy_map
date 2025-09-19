@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>中国能源与工业地图 - 网格图</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="heat_style.css" />
+  </head>
+  <body>
+
+    <nav class="top-nav">
+      <a href="index.html">气泡图</a>
+      <a href="heatmap.html" class="active">网格图</a>
+    </nav>
+
+
+    <div id="map"></div>
+
+    <div id="loader" class="loader"></div>
+
+    <div id="data-select-control">
+      <label for="data-select">选择数据: </label>
+      <select id="data-select">
+        <option value="nitrogen" selected>氮肥</option>
+        <option value="biomass">潜在生物质资源</option>
+      </select>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+
+      var global = window;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.glify@latest/dist/glify.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
