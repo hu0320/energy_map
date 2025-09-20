@@ -44,7 +44,7 @@ window.onload = function () {
       },
     },
     biomass: {
-      filePath: "./implified_bio_data.geojson",
+      filePath: "./simplified_bio_data.geojson",
       property: "capacity",
       legendTitle: "潜在生物质资源 (kt/year)",
       popupTemplate: (val) => `<b>潜在生物质资源:</b> ${val.toFixed(2)} kt/year`,
